@@ -1,0 +1,35 @@
+{
+  "id": "transformers-1",
+  "title": "Transformers: Turns Ratio & Losses",
+  "topic": "Electrical Machines",
+  "difficulty": "Moderate",
+  "durationSec": 300,
+  "questions": [
+    {
+      "q": "Transformer works on the principle of:",
+      "options": [
+        "Self-induction",
+        "Mutual induction",
+        "Electrostatic induction",
+        "Thermionic emission"
+      ],
+      "answer": 1,
+      "fact": "A transformer transfers electrical energy between two circuits through mutual induction.",
+      "trick": "Two coils -> Mutual induction.",
+      "source": "RRB JE Electrical Syllabus - Transformers"
+    },
+    {
+      "q": "Core of a transformer is laminated to reduce:",
+      "options": [
+        "Hysteresis loss",
+        "Eddy current loss",
+        "Copper loss",
+        "Friction loss"
+      ],
+      "answer": 1,
+      "fact": "Thin laminations increase resistance to circulating eddy currents, reducing eddy current loss.",
+      "trick": "Lamination -> Stops Eddy currents.",
+      "source": "RRB JE Electrical Syllabus - Transformers"
+    }
+  ]
+}
