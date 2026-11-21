@@ -1,0 +1,74 @@
+{
+  "config": {
+    "title": "Electrical Studio",
+    "badge": "RRB JE",
+    "accent": "#0f4c81",
+    "accent2": "#0284c7",
+    "bg": "#eef2f7",
+    "surface": "#ffffff",
+    "fontScale": 1,
+    "bannerTitle": "RRB JE Electrical Engineering — Technical CBT",
+    "bannerSub": "Data-driven practice loaded live from data.json with GitHub API Admin Sync.",
+    "quotesEnabled": true
+  },
+  "quizzes": [
+    {
+      "id": "basic-concepts-1",
+      "title": "Basic Concepts: Charge, Current, Resistance & Ohm's Law",
+      "topic": "Basic Concepts",
+      "difficulty": "Easy-Moderate",
+      "durationSec": 420,
+      "questions": [
+        {
+          "q": "SI unit of electrical resistivity (rho) is:",
+          "options": ["Ohm", "Ohm-meter", "Siemens", "Mho/meter"],
+          "answer": 1,
+          "fact": "Resistivity rho = R * A / l, so its SI unit is Ohm-meter (Omega*m).",
+          "trick": "Rho has 'meter' in length/area ratio -> Ohm-meter.",
+          "source": "RRB JE Electrical Syllabus - Basic Concepts"
+        },
+        {
+          "q": "If a wire of resistance R is stretched to double its length (volume constant), new resistance becomes:",
+          "options": ["2R", "4R", "R/2", "R/4"],
+          "answer": 1,
+          "fact": "With constant volume, R is proportional to l^2; doubling length makes resistance 4R.",
+          "trick": "Stretch n times -> n^2 times resistance (2^2 = 4).",
+          "source": "RRB JE Electrical Syllabus - Resistance & Geometry"
+        },
+        {
+          "q": "Temperature coefficient of resistance of pure metals is generally:",
+          "options": ["Positive", "Negative", "Zero", "Infinite"],
+          "answer": 0,
+          "fact": "In pure metals, higher temperature increases lattice vibrations and collisions, increasing resistance.",
+          "trick": "Metals go UP with heat -> Positive alpha.",
+          "source": "RRB JE Electrical Syllabus - Temperature Coefficient"
+        }
+      ]
+    },
+    {
+      "id": "circuit-laws-1",
+      "title": "Circuit Laws: KCL, KVL & Series-Parallel Basics",
+      "topic": "Circuit Laws",
+      "difficulty": "Moderate",
+      "durationSec": 360,
+      "questions": [
+        {
+          "q": "Kirchhoff's Current Law (KCL) is a direct consequence of conservation of:",
+          "options": ["Energy", "Charge", "Momentum", "Magnetic flux"],
+          "answer": 1,
+          "fact": "Charge cannot accumulate at a lumped node, so algebraic sum of currents at a node is zero.",
+          "trick": "KCL = Current = Flow of Charge -> Conservation of Charge.",
+          "source": "RRB JE Electrical Syllabus - Kirchhoff's Laws"
+        },
+        {
+          "q": "Kirchhoff's Voltage Law (KVL) is based on conservation of:",
+          "options": ["Charge", "Energy", "Current", "Inductance"],
+          "answer": 1,
+          "fact": "Sum of potential differences around any closed loop is zero, reflecting energy conservation.",
+          "trick": "KVL = Voltage (work/energy per unit charge) -> Conservation of Energy.",
+          "source": "RRB JE Electrical Syllabus - Kirchhoff's Laws"
+        }
+      ]
+    }
+  ]
+}
