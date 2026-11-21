@@ -26,612 +26,183 @@
     --shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
   }
 
-  * {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
   html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-    background: var(--bg);
-    color: var(--ink);
+    margin: 0; padding: 0; width: 100%; min-height: 100%;
+    background: var(--bg); color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", sans-serif;
     font-size: calc(15px * var(--font-scale));
-    line-height: 1.45;
-    overflow-x: hidden;
+    line-height: 1.45; overflow-x: hidden;
   }
 
-  .app-shell {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 8px;
-  }
-
-  @media (min-width: 768px) {
-    .app-shell {
-      padding: 14px 18px;
-    }
-  }
+  .app-shell { width: 100%; max-width: 1120px; margin: 0 auto; padding: 8px; }
+  @media (min-width: 768px) { .app-shell { padding: 14px 18px; } }
 
   .simple-view .secondary-info,
   .simple-view .banner-sub,
-  .simple-view .stat-sub {
-    display: none !important;
-  }
-
-  .simple-view .card {
-    padding: 10px 12px;
-  }
+  .simple-view .stat-sub { display: none !important; }
+  .simple-view .card { padding: 10px 12px; }
 
   .topbar {
     background: linear-gradient(135deg, var(--ink), var(--accent));
-    color: #fff;
-    border-radius: var(--radius);
-    padding: 10px 12px;
-    box-shadow: var(--shadow);
-    margin-bottom: 10px;
+    color: #fff; border-radius: var(--radius);
+    padding: 10px 12px; box-shadow: var(--shadow); margin-bottom: 10px;
   }
-
   .topbar-top {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    margin-bottom: 8px;
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: 8px; margin-bottom: 8px;
   }
-
-  .brand-wrap {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-width: 0;
-    flex: 1 1 200px;
-  }
-
+  .brand-wrap { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1 1 200px; }
   .brand-badge {
-    background: rgba(255, 255, 255, 0.16);
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    padding: 5px 8px;
-    border-radius: 7px;
-    font-weight: 800;
-    font-size: 0.85rem;
-    letter-spacing: 0.4px;
-    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.28);
+    padding: 5px 8px; border-radius: 7px; font-weight: 800; font-size: 0.85rem; flex-shrink: 0;
   }
-
-  .brand-title {
-    font-size: 1rem;
-    font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .right-clocks {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-
+  .brand-title { font-size: 1rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .right-clocks { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .pill-clock {
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    padding: 4px 8px;
-    border-radius: 7px;
-    font-size: 0.8rem;
-    font-variant-numeric: tabular-nums;
-    font-weight: 600;
+    background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 4px 8px; border-radius: 7px; font-size: 0.8rem; font-variant-numeric: tabular-nums; font-weight: 600;
   }
-
   .pill-test-timer {
-    background: #dc2626;
-    color: #fff;
-    border: 1px solid #fca5a5;
-    padding: 4px 9px;
-    border-radius: 7px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-    display: none;
+    background: #dc2626; color: #fff; border: 1px solid #fca5a5;
+    padding: 4px 9px; border-radius: 7px; font-size: 0.82rem; font-weight: 700; display: none;
   }
+  .pill-test-timer.active { display: inline-flex; align-items: center; gap: 4px; }
 
-  .pill-test-timer.active {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .search-row {
-    display: flex;
-    gap: 6px;
-    width: 100%;
-  }
-
+  .search-row { display: flex; gap: 6px; width: 100%; }
   .search-input {
-    flex: 1;
-    min-width: 0;
-    width: 100%;
-    padding: 8px 10px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    font-size: 0.9rem;
-    background: #fff;
-    color: var(--ink);
+    flex: 1; min-width: 0; padding: 8px 10px; border-radius: 8px;
+    border: none; outline: none; font-size: 0.9rem; background: #fff; color: var(--ink);
   }
 
-  .nav-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 10px;
-  }
+  .nav-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
 
   .btn {
-    border: 1px solid var(--line);
-    background: var(--surface);
-    color: var(--ink);
-    padding: 7px 11px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+    padding: 7px 11px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
     transition: background 0.15s, border-color 0.15s;
   }
-
-  .btn:hover {
-    background: var(--surface-2);
-    border-color: #94a3b8;
-  }
-
-  .btn.primary {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-  }
-
-  .btn.primary:hover {
-    background: var(--accent-2);
-    border-color: var(--accent-2);
-  }
-
-  .btn.ok {
-    background: var(--ok);
-    color: #fff;
-    border-color: var(--ok);
-  }
-
-  .btn.danger {
-    background: var(--bad);
-    color: #fff;
-    border-color: var(--bad);
-  }
-
-  .btn.sm {
-    padding: 5px 8px;
-    font-size: 0.78rem;
-  }
-
-  .btn.active-tab {
-    background: var(--accent);
-    color: #fff;
-    border-color: var(--accent);
-  }
+  .btn:hover { background: var(--surface-2); border-color: #94a3b8; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn.primary:hover { background: var(--accent-2); border-color: var(--accent-2); }
+  .btn.ok { background: var(--ok); color: #fff; border-color: var(--ok); }
+  .btn.danger { background: var(--bad); color: #fff; border-color: var(--bad); }
+  .btn.sm { padding: 5px 8px; font-size: 0.78rem; }
+  .btn.active-tab { background: var(--accent); color: #fff; border-color: var(--accent); }
 
   .card {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 12px 14px;
-    box-shadow: var(--shadow);
-    margin-bottom: 10px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 12px 14px; box-shadow: var(--shadow); margin-bottom: 10px;
   }
 
-  /* Prominent Motivational Quotes Section */
   .quote-card {
     background: linear-gradient(135deg, #0f172a 0%, var(--accent) 65%, var(--accent-2) 100%);
-    color: #ffffff;
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    box-shadow: var(--shadow);
-    margin-bottom: 10px;
-    position: relative;
-    overflow: hidden;
+    color: #fff; border-radius: var(--radius); padding: 14px 16px;
+    box-shadow: var(--shadow); margin-bottom: 10px;
   }
-
-  .quote-top {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-
+  .quote-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
   .quote-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(255, 255, 255, 0.16);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 3px 9px;
-    border-radius: 999px;
-    font-size: 0.74rem;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 3px 9px; border-radius: 999px; font-size: 0.74rem; font-weight: 700; text-transform: uppercase;
   }
-
-  .quote-status {
-    font-size: 0.76rem;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 500;
-  }
-
-  .quote-text {
-    margin: 0 0 6px 0;
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.45;
-    color: #ffffff;
-  }
-
-  .quote-author {
-    font-size: 0.84rem;
-    color: #bae6fd;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  .quote-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .btn-quote-light {
-    background: #ffffff;
-    color: var(--ink);
-    border: 1px solid #ffffff;
-  }
-
-  .btn-quote-light:hover {
-    background: #e0f2fe;
-    border-color: #e0f2fe;
-  }
-
-  .btn-quote-ghost {
-    background: rgba(255, 255, 255, 0.14);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.28);
-  }
-
-  .btn-quote-ghost:hover {
-    background: rgba(255, 255, 255, 0.24);
-    border-color: rgba(255, 255, 255, 0.4);
-  }
+  .quote-status { font-size: 0.76rem; color: rgba(255, 255, 255, 0.85); }
+  .quote-text { margin: 0 0 6px 0; font-size: 1.05rem; font-weight: 600; line-height: 1.45; }
+  .quote-author { font-size: 0.84rem; color: #bae6fd; font-weight: 600; margin-bottom: 10px; }
+  .quote-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+  .btn-quote-light { background: #fff; color: var(--ink); border: 1px solid #fff; }
+  .btn-quote-ghost { background: rgba(255, 255, 255, 0.14); color: #fff; border: 1px solid rgba(255, 255, 255, 0.28); }
 
   .banner {
-    background: var(--accent-soft);
-    border: 1px solid #bae6fd;
-    border-radius: var(--radius);
-    padding: 10px 12px;
-    margin-bottom: 10px;
-    color: var(--ink);
+    background: var(--accent-soft); border: 1px solid #bae6fd; border-radius: var(--radius);
+    padding: 10px 12px; margin-bottom: 10px; color: var(--ink);
   }
+  .banner-title { font-weight: 700; font-size: 0.95rem; color: var(--accent); }
+  .banner-sub { font-size: 0.84rem; color: var(--muted); margin-top: 2px; }
 
-  .banner-title {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--accent);
-  }
+  .grid-2 { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  @media (min-width: 720px) { .grid-2 { grid-template-columns: repeat(2, 1fr); } }
+  .grid-3 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  @media (min-width: 720px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
 
-  .banner-sub {
-    font-size: 0.84rem;
-    color: var(--muted);
-    margin-top: 2px;
-  }
-
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  @media (min-width: 720px) {
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  @media (min-width: 720px) {
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  .stat-box {
-    background: var(--surface-2);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 9px 10px;
-  }
-
-  .stat-label {
-    font-size: 0.75rem;
-    color: var(--muted);
-    font-weight: 600;
-  }
-
-  .stat-val {
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: var(--ink);
-    margin-top: 2px;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .stat-sub {
-    font-size: 0.74rem;
-    color: var(--muted);
-    margin-top: 2px;
-  }
+  .stat-box { background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; }
+  .stat-label { font-size: 0.75rem; color: var(--muted); font-weight: 600; }
+  .stat-val { font-size: 1.15rem; font-weight: 800; color: var(--ink); margin-top: 2px; }
+  .stat-sub { font-size: 0.74rem; color: var(--muted); margin-top: 2px; }
 
   .section-title {
-    font-size: 0.98rem;
-    font-weight: 700;
-    margin: 0 0 8px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
+    font-size: 0.98rem; font-weight: 700; margin: 0 0 8px 0;
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
   }
-
-  .muted {
-    color: var(--muted);
-    font-size: 0.84rem;
-  }
+  .muted { color: var(--muted); font-size: 0.84rem; }
 
   .tag {
-    display: inline-block;
-    padding: 2px 7px;
-    border-radius: 999px;
-    font-size: 0.74rem;
-    font-weight: 700;
-    background: var(--surface-2);
-    border: 1px solid var(--line);
-    color: var(--ink);
+    display: inline-block; padding: 2px 7px; border-radius: 999px; font-size: 0.74rem;
+    font-weight: 700; background: var(--surface-2); border: 1px solid var(--line); color: var(--ink);
   }
-
   .tag.ok { background: var(--ok-bg); color: var(--ok); border-color: #86efac; }
   .tag.warn { background: var(--warn-bg); color: var(--warn); border-color: #fcd34d; }
   .tag.bad { background: var(--bad-bg); color: var(--bad); border-color: #fca5a5; }
 
   .quiz-item {
-    border: 1px solid var(--line);
-    border-radius: 9px;
-    padding: 10px 12px;
-    background: var(--surface-2);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    border: 1px solid var(--line); border-radius: 9px; padding: 10px 12px;
+    background: var(--surface-2); display: flex; flex-direction: column; gap: 6px;
   }
+  .quiz-item-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .quiz-title { font-weight: 700; font-size: 0.94rem; }
+  .quiz-meta { display: flex; flex-wrap: wrap; gap: 5px; font-size: 0.76rem; color: var(--muted); }
 
-  .quiz-item-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .quiz-title {
-    font-weight: 700;
-    font-size: 0.94rem;
-  }
-
-  .quiz-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    font-size: 0.76rem;
-    color: var(--muted);
-  }
-
-  .cbt-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  @media (min-width: 840px) {
-    .cbt-layout {
-      grid-template-columns: 1fr 270px;
-      align-items: start;
-    }
-  }
+  .cbt-layout { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  @media (min-width: 840px) { .cbt-layout { grid-template-columns: 1fr 270px; align-items: start; } }
 
   .q-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 6px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 10px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+    gap: 6px; padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 10px;
   }
-
   .q-stopwatch {
-    background: var(--accent-soft);
-    color: var(--accent);
-    border: 1px solid #bae6fd;
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
+    background: var(--accent-soft); color: var(--accent); border: 1px solid #bae6fd;
+    padding: 3px 8px; border-radius: 6px; font-size: 0.8rem; font-weight: 700;
   }
-
-  .q-text {
-    font-size: 0.98rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  .opt-list {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    margin-bottom: 12px;
-  }
-
+  .q-text { font-size: 0.98rem; font-weight: 600; margin-bottom: 10px; }
+  .opt-list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px; }
   .opt-btn {
-    width: 100%;
-    text-align: left;
-    padding: 9px 11px;
-    border-radius: 8px;
-    border: 1px solid var(--line);
-    background: var(--surface-2);
-    color: var(--ink);
-    font-size: 0.9rem;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+    width: 100%; text-align: left; padding: 9px 11px; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--surface-2); color: var(--ink);
+    font-size: 0.9rem; cursor: pointer; display: flex; align-items: flex-start; gap: 8px;
   }
+  .opt-btn.selected { background: var(--accent-soft); border-color: var(--accent); font-weight: 600; }
+  .cbt-actions { display: flex; flex-wrap: wrap; gap: 6px; }
 
-  .opt-btn.selected {
-    background: var(--accent-soft);
-    border-color: var(--accent);
-    font-weight: 600;
-  }
-
-  .cbt-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .palette-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 6px;
-    margin: 8px 0 10px;
-  }
-
+  .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 8px 0 10px; }
   .pal-btn {
-    height: 34px;
-    border-radius: 7px;
-    border: 1px solid var(--line);
-    font-weight: 700;
-    font-size: 0.82rem;
-    cursor: pointer;
-    background: #f1f5f9;
-    color: var(--ink);
+    height: 34px; border-radius: 7px; border: 1px solid var(--line);
+    font-weight: 700; font-size: 0.82rem; cursor: pointer; background: #f1f5f9; color: var(--ink);
   }
-
   .pal-btn.ans { background: #dcfce7; border-color: #22c55e; color: #14532d; }
   .pal-btn.rev { background: #fef3c7; border-color: #f59e0b; color: #78350f; }
   .pal-btn.ans-rev { background: #e0e7ff; border-color: #6366f1; color: #312e81; }
   .pal-btn.current { outline: 2px solid var(--ink); outline-offset: 1px; }
 
-  .legend {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    font-size: 0.74rem;
-    color: var(--muted);
-  }
+  .legend { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; font-size: 0.74rem; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,0.2); }
 
-  .legend span {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+  input[type="text"], input[type="password"], input[type="number"], select, textarea {
+    width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line);
+    background: #fff; color: var(--ink); font-family: inherit; font-size: 0.88rem;
   }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 3px;
-    display: inline-block;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-  }
-
-  input[type="text"],
-  input[type="password"],
-  input[type="number"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 8px 10px;
-    border-radius: 8px;
-    border: 1px solid var(--line);
-    background: #fff;
-    color: var(--ink);
-    font-family: inherit;
-    font-size: 0.88rem;
-  }
-
-  textarea {
-    min-height: 90px;
-    resize: vertical;
-  }
-
-  .field {
-    margin-bottom: 8px;
-  }
-
-  .field label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 3px;
-    color: var(--muted);
-  }
-
-  .review-item {
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 8px;
-    background: var(--surface-2);
-  }
+  textarea { min-height: 90px; resize: vertical; }
+  .field { margin-bottom: 8px; }
+  .field label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px; color: var(--muted); }
+  .review-item { border: 1px solid var(--line); border-radius: 8px; padding: 10px; margin-bottom: 8px; background: var(--surface-2); }
 
   .toast {
-    position: fixed;
-    bottom: 14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--ink);
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 0.84rem;
-    font-weight: 600;
-    z-index: 9999;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-    display: none;
+    position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: #fff; padding: 8px 14px; border-radius: 8px;
+    font-size: 0.84rem; font-weight: 600; z-index: 9999; box-shadow: 0 4px 14px rgba(0,0,0,0.25); display: none;
   }
-
-  .hidden {
-    display: none !important;
-  }
+  .hidden { display: none !important; }
 </style>
 </head>
 <body>
@@ -639,17 +210,18 @@
   <header class="topbar">
     <div class="topbar-top">
       <div class="brand-wrap">
-        <span class="brand-badge">RRB JE</span>
+        <span class="brand-badge" id="brandBadge">RRB JE</span>
         <span class="brand-title" id="brandTitle">Electrical Studio</span>
       </div>
       <div class="right-clocks">
+        <span class="pill-clock" id="dataSyncStatus">Loading data...</span>
         <span class="pill-clock" id="liveClock">--:--:--</span>
         <span class="pill-test-timer" id="testTimerPill">Test Left: 00:00</span>
       </div>
     </div>
     <div class="search-row">
       <input type="text" id="globalSearch" class="search-input" placeholder="Search quizzes, topics (Ohm's Law, KCL, Transformers)..." />
-      <button class="btn sm" id="clearSearchBtn" title="Clear search">Clear</button>
+      <button class="btn sm" id="clearSearchBtn">Clear</button>
     </div>
   </header>
 
@@ -658,13 +230,12 @@
     <button class="btn sm" data-view="library" id="navLibrary">Quizzes</button>
     <button class="btn sm" data-view="mistakes" id="navMistakes">Mistakes (<span id="mistakeCountBadge">0</span>)</button>
     <button class="btn sm" data-view="analytics" id="navAnalytics">Performance</button>
-    <button class="btn sm" data-view="dev" id="navDev">Dev Studio</button>
-    <button class="btn sm" id="toggleSimpleViewBtn" title="Toggle Simple / Normal View">Simple View</button>
+    <button class="btn sm" data-view="admin" id="navAdmin">Admin Panel</button>
+    <button class="btn sm" id="toggleSimpleViewBtn">Simple View</button>
   </nav>
 
   <section id="view-home" class="view-panel">
-    <!-- Motivational Quotes API Section -->
-    <div class="quote-card" aria-label="Daily Motivational Quote">
+    <div class="quote-card" id="quotesSection" aria-label="Daily Motivational Quote">
       <div class="quote-top">
         <span class="quote-badge">Daily Motivation</span>
         <span class="quote-status" id="quoteSourceStatus">Connecting to Quotes API...</span>
@@ -679,20 +250,19 @@
 
     <div class="banner">
       <div class="banner-title" id="homeBannerTitle">RRB JE Electrical Engineering — Technical CBT</div>
-      <div class="banner-sub" id="homeBannerSub">Syllabus-focused practice, per-question timing, mistake tracking, and live customization.</div>
+      <div class="banner-sub" id="homeBannerSub">Data-driven practice loaded live from data.json.</div>
     </div>
 
-    <!-- Performance Tracking Summary Directly Below -->
     <div class="grid-3" style="margin-bottom: 10px;">
       <div class="stat-box">
         <div class="stat-label">Quizzes Ready</div>
         <div class="stat-val" id="statQuizCount">0</div>
-        <div class="stat-sub">Electrical Technical</div>
+        <div class="stat-sub">Loaded from data.json</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Tests Completed</div>
         <div class="stat-val" id="statAttemptCount">0</div>
-        <div class="stat-sub">Saved locally</div>
+        <div class="stat-sub">Saved on your device</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Avg Time / Q</div>
@@ -731,22 +301,20 @@
   <section id="view-gate" class="view-panel hidden">
     <div class="card">
       <div class="section-title">
-        <span id="gateTitle">Quiz Instructions &amp; Warning</span>
+        <span id="gateTitle">Quiz Instructions</span>
         <span class="tag warn">CBT Gate</span>
       </div>
       <p class="muted" id="gateMeta"></p>
       <div class="banner" style="background: var(--warn-bg); border-color: #fcd34d;">
         <div class="banner-title" style="color: var(--warn);">Important Exam Rules</div>
         <ul style="margin: 6px 0 0 18px; padding: 0; font-size: 0.88rem;">
-          <li>The test countdown starts only after you click <strong>Start Now</strong>.</li>
-          <li>Fullscreen mode will be requested when starting the quiz.</li>
-          <li>Time is recorded individually for every question you visit.</li>
-          <li>Marking scheme: <strong>+1</strong> for correct, <strong>-0.25</strong> for wrong, <strong>0</strong> for unattempted.</li>
+          <li>Countdown starts after you click <strong>Start Now</strong>.</li>
+          <li>Marking: <strong>+1</strong> correct, <strong>-0.25</strong> wrong, <strong>0</strong> skipped.</li>
         </ul>
       </div>
-      <label style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600; margin: 10px 0 12px; cursor: pointer;">
+      <label style="display:flex; align-items:center; gap:8px; font-size:0.88rem; font-weight:600; margin:10px 0 12px; cursor:pointer;">
         <input type="checkbox" id="gateAgreeCheckbox" />
-        <span>I have read the instructions and am ready to start the test.</span>
+        <span>I have read the instructions and am ready to start.</span>
       </label>
       <div class="cbt-actions">
         <button class="btn ok" id="gateStartBtn">Start Now</button>
@@ -769,8 +337,8 @@
         <div class="opt-list" id="cbtOptionsList"></div>
         <div class="cbt-actions">
           <button class="btn sm" id="btnPrevQ">Previous</button>
-          <button class="btn sm" id="btnClearQ">Clear Response</button>
-          <button class="btn sm" id="btnMarkReview">Mark for Review</button>
+          <button class="btn sm" id="btnClearQ">Clear</button>
+          <button class="btn sm" id="btnMarkReview">Mark Review</button>
           <button class="btn sm primary" id="btnSaveNext">Save &amp; Next</button>
         </div>
       </div>
@@ -823,84 +391,81 @@
     </div>
   </section>
 
-  <section id="view-dev" class="view-panel hidden">
-    <div class="card" id="devLockCard">
+  <!-- ADMIN PANEL WITH GITHUB API SYNC -->
+  <section id="view-admin" class="view-panel hidden">
+    <div class="card" id="adminLockCard">
       <div class="section-title">
-        <span>Developer Access Lock</span>
+        <span>Admin Panel Lock</span>
         <span class="tag">Protected</span>
       </div>
-      <p class="muted">Enter PIN (default: <code>1234</code>) or use Quick Unlock to customize UI, manage quizzes, or apply custom code patches.</p>
+      <p class="muted">Enter Admin PIN (default: <code>1234</code>) to edit layout, colors, quizzes, and push updates directly to GitHub <code>data.json</code>.</p>
       <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
-        <input type="password" id="devPinInput" placeholder="Enter PIN (1234)" style="max-width: 180px;" />
-        <button class="btn primary" id="devUnlockBtn">Unlock</button>
-        <button class="btn" id="devQuickUnlockBtn">Quick Unlock</button>
+        <input type="password" id="adminPinInput" placeholder="Enter PIN (1234)" style="max-width: 180px;" />
+        <button class="btn primary" id="adminUnlockBtn">Unlock</button>
       </div>
     </div>
 
-    <div id="devStudioBody" class="hidden">
+    <div id="adminPanelBody" class="hidden">
       <div class="card">
         <div class="section-title">
-          <span>UI &amp; Theme Customizer</span>
-          <button class="btn sm" id="devLockNowBtn">Lock</button>
+          <span>GitHub API Connection (Live data.json Sync)</span>
+          <button class="btn sm" id="adminLockNowBtn">Lock</button>
         </div>
+        <p class="muted">Connect your GitHub repository to read and update <code>data.json</code> directly from this browser.</p>
         <div class="grid-2">
           <div class="field">
-            <label>App Title</label>
-            <input type="text" id="cfgTitle" />
+            <label>GitHub Username / Owner</label>
+            <input type="text" id="ghOwner" placeholder="e.g. your-username" />
           </div>
           <div class="field">
-            <label>Language Label Mode</label>
-            <select id="cfgLang">
-              <option value="en">English</option>
-              <option value="hi-en">Hinglish</option>
-              <option value="hi">Hindi</option>
-            </select>
+            <label>Repository Name</label>
+            <input type="text" id="ghRepo" value="JE-CRASH-COURSE" />
           </div>
           <div class="field">
-            <label>Accent Color</label>
-            <input type="color" id="cfgAccent" style="height: 36px; padding: 2px;" />
+            <label>Branch</label>
+            <input type="text" id="ghBranch" value="main" />
           </div>
           <div class="field">
-            <label>Font Scale (0.85 - 1.25)</label>
-            <input type="number" step="0.05" min="0.85" max="1.25" id="cfgFontScale" />
+            <label>File Path</label>
+            <input type="text" id="ghPath" value="data.json" />
           </div>
         </div>
         <div class="field">
-          <label>Homepage Banner Title</label>
-          <input type="text" id="cfgBannerTitle" />
-        </div>
-        <div class="field">
-          <label>Homepage Banner Subtitle</label>
-          <input type="text" id="cfgBannerSub" />
-        </div>
-        <button class="btn primary" id="saveThemeBtn">Apply UI Settings</button>
-      </div>
-
-      <div class="card">
-        <div class="section-title"><span>Upload / Add Quiz JSON</span></div>
-        <p class="muted">Paste a quiz JSON object or array below, or load a sample question set, then click Save Quiz.</p>
-        <div class="field">
-          <label>Quiz JSON</label>
-          <textarea id="devQuizJsonInput" placeholder='{"id":"q-custom","title":"KCL & KVL Practice","topic":"Basic Concepts","durationSec":300,"difficulty":"Moderate","questions":[{"q":"Sum of currents entering a node is zero is:","options":["KCL","KVL","Ohm Law","Norton"],"answer":0,"fact":"KCL is based on conservation of charge.","trick":"Current = Charge -> KCL = Charge.","source":"RRB JE Electrical Syllabus - Circuit Laws"}]}'></textarea>
+          <label>GitHub Personal Access Token (PAT - stored only in your browser)</label>
+          <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
         </div>
         <div class="cbt-actions">
-          <button class="btn ok" id="devAddQuizBtn">Save Quiz to Library</button>
-          <button class="btn" id="devFillSampleJsonBtn">Load Sample JSON</button>
-          <button class="btn danger" id="devResetAllBtn">Reset All Saved Data</button>
+          <button class="btn" id="ghLoadBtn">Pull Latest data.json from GitHub</button>
+          <button class="btn ok" id="ghPushBtn">Push &amp; Save data.json to GitHub</button>
         </div>
+        <p class="muted" id="ghSyncStatus" style="margin-top:8px;"></p>
       </div>
 
       <div class="card">
-        <div class="section-title"><span>Custom CSS / JS Patch Runner</span></div>
-        <div class="field">
-          <label>Custom CSS</label>
-          <textarea id="devCustomCss" placeholder="/* Example: .topbar { border-radius: 0; } */"></textarea>
+        <div class="section-title"><span>Layout, Colors &amp; Text (data.json &rarr; config)</span></div>
+        <div class="grid-2">
+          <div class="field"><label>App Title</label><input type="text" id="cfgTitle" /></div>
+          <div class="field"><label>Badge Text</label><input type="text" id="cfgBadge" /></div>
+          <div class="field"><label>Primary Accent Color</label><input type="color" id="cfgAccent" style="height:36px;padding:2px;" /></div>
+          <div class="field"><label>Secondary Accent Color</label><input type="color" id="cfgAccent2" style="height:36px;padding:2px;" /></div>
+          <div class="field"><label>Background Color</label><input type="color" id="cfgBg" style="height:36px;padding:2px;" /></div>
+          <div class="field"><label>Font Scale (0.85 - 1.25)</label><input type="number" step="0.05" min="0.85" max="1.25" id="cfgFontScale" /></div>
         </div>
+        <div class="field"><label>Banner Title</label><input type="text" id="cfgBannerTitle" /></div>
+        <div class="field"><label>Banner Subtitle</label><input type="text" id="cfgBannerSub" /></div>
+        <button class="btn primary" id="applyConfigLocalBtn">Preview Changes Locally</button>
+      </div>
+
+      <div class="card">
+        <div class="section-title"><span>Add New Quiz to data.json</span></div>
         <div class="field">
-          <label>Custom JS Snippet (runs on apply)</label>
-          <textarea id="devCustomJs" placeholder="// Example: showToast('Custom patch active');"></textarea>
+          <label>Paste Quiz JSON Object</label>
+          <textarea id="adminQuizJsonInput" placeholder='{"id":"transformers-1","title":"Transformers Basics","topic":"Machines","difficulty":"Moderate","durationSec":300,"questions":[{"q":"Transformer works on:","options":["Self induction","Mutual induction","Static","None"],"answer":1,"fact":"Mutual induction transfers energy.","trick":"Two coils = Mutual","source":"RRB JE"}]}'></textarea>
         </div>
-        <button class="btn primary" id="devApplyPatchBtn">Apply Custom CSS &amp; JS</button>
+        <div class="cbt-actions">
+          <button class="btn ok" id="adminAddQuizBtn">Add Quiz to Memory</button>
+          <button class="btn" id="adminDownloadJsonBtn">Download data.json</button>
+        </div>
       </div>
     </div>
   </section>
@@ -910,124 +475,55 @@
 
 <script>
 (function () {
-  const STORAGE_KEY = "rrb_je_electrical_studio_v2";
-  const DEV_PIN = "1234";
+  const USER_STORAGE_KEY = "rrb_je_user_progress_v1";
+  const GH_SETTINGS_KEY = "rrb_je_gh_settings_v1";
+  const ADMIN_PIN = "1234";
 
   const FALLBACK_QUOTES = [
     { quote: "Success is the sum of small efforts, repeated day in and day out.", author: "Robert Collier" },
     { quote: "The secret of getting ahead is getting started.", author: "Mark Twain" },
-    { quote: "It always seems impossible until it is done.", author: "Nelson Mandela" },
     { quote: "Discipline is the bridge between goals and accomplishment.", author: "Jim Rohn" },
-    { quote: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
-    { quote: "Push yourself, because no one else is going to do it for you.", author: "Unknown" }
+    { quote: "It always seems impossible until it is done.", author: "Nelson Mandela" }
   ];
 
-  const DEFAULT_QUIZZES = [
-    {
-      id: "basic-concepts-1",
-      title: "Basic Concepts: Charge, Current, Resistance & Ohm's Law",
-      topic: "Basic Concepts",
-      difficulty: "Easy-Moderate",
-      durationSec: 420,
-      questions: [
-        {
-          q: "SI unit of electrical resistivity (rho) is:",
-          options: ["Ohm", "Ohm-meter", "Siemens", "Mho/meter"],
-          answer: 1,
-          fact: "Resistivity rho = R * A / l, so its SI unit is Ohm-meter (Omega*m).",
-          trick: "Rho has 'meter' in length/area ratio -> Ohm-meter.",
-          source: "RRB JE Electrical Syllabus - Basic Concepts (Standard Electrical Engineering)"
-        },
-        {
-          q: "If a wire of resistance R is stretched to double its length (volume constant), new resistance becomes:",
-          options: ["2R", "4R", "R/2", "R/4"],
-          answer: 1,
-          fact: "With constant volume, R is proportional to l^2; doubling length makes resistance 4R.",
-          trick: "Stretch n times -> n^2 times resistance (2^2 = 4).",
-          source: "RRB JE Electrical Syllabus - Resistance & Geometry"
-        },
-        {
-          q: "Temperature coefficient of resistance of pure metals is generally:",
-          options: ["Positive", "Negative", "Zero", "Infinite"],
-          answer: 0,
-          fact: "In pure metals, higher temperature increases lattice vibrations and collisions, increasing resistance.",
-          trick: "Metals go UP with heat -> Positive alpha.",
-          source: "RRB JE Electrical Syllabus - Temperature Coefficient"
-        },
-        {
-          q: "One kilowatt-hour (1 kWh) of electrical energy equals:",
-          options: ["3.6 x 10^3 J", "3.6 x 10^5 J", "3.6 x 10^6 J", "1000 J"],
-          answer: 2,
-          fact: "1 kWh = 1000 W * 3600 s = 3,600,000 J = 3.6 MJ.",
-          trick: "1 kW (10^3) * 1 hr (3600 s) = 3.6 * 10^6 Joules.",
-          source: "RRB JE Electrical Syllabus - Electrical Power & Energy"
-        },
-        {
-          q: "An ideal voltage source has:",
-          options: ["Zero internal resistance", "Infinite internal resistance", "High current only", "Variable frequency"],
-          answer: 0,
-          fact: "An ideal voltage source maintains constant terminal voltage regardless of load current (r_int = 0).",
-          trick: "Ideal V -> 0 internal resistance; Ideal I -> Infinite internal resistance.",
-          source: "RRB JE Electrical Syllabus - Circuit Elements & Sources"
-        }
-      ]
+  const FALLBACK_DATA = {
+    config: {
+      title: "Electrical Studio",
+      badge: "RRB JE",
+      accent: "#0f4c81",
+      accent2: "#0284c7",
+      bg: "#eef2f7",
+      surface: "#ffffff",
+      fontScale: 1,
+      bannerTitle: "RRB JE Electrical Engineering — Technical CBT",
+      bannerSub: "Data-driven practice loaded live from data.json with GitHub API Admin Sync.",
+      quotesEnabled: true
     },
-    {
-      id: "circuit-laws-1",
-      title: "Circuit Laws: KCL, KVL & Series-Parallel Basics",
-      topic: "Circuit Laws",
-      difficulty: "Moderate",
-      durationSec: 360,
-      questions: [
-        {
-          q: "Kirchhoff's Current Law (KCL) is a direct consequence of conservation of:",
-          options: ["Energy", "Charge", "Momentum", "Magnetic flux"],
-          answer: 1,
-          fact: "Charge cannot accumulate at a lumped node, so algebraic sum of currents at a node is zero.",
-          trick: "KCL = Current = Flow of Charge -> Conservation of Charge.",
-          source: "RRB JE Electrical Syllabus - Kirchhoff's Laws"
-        },
-        {
-          q: "Kirchhoff's Voltage Law (KVL) is based on conservation of:",
-          options: ["Charge", "Energy", "Current", "Inductance"],
-          answer: 1,
-          fact: "Sum of potential differences around any closed loop is zero, reflecting energy conservation.",
-          trick: "KVL = Voltage (work/energy per unit charge) -> Conservation of Energy.",
-          source: "RRB JE Electrical Syllabus - Kirchhoff's Laws"
-        },
-        {
-          q: "Three equal resistors of 6 Ohm each connected in parallel give an equivalent resistance of:",
-          options: ["18 Ohm", "6 Ohm", "2 Ohm", "3 Ohm"],
-          answer: 2,
-          fact: "For n equal resistors R in parallel, R_eq = R / n = 6 / 3 = 2 Ohm.",
-          trick: "Same value in parallel -> Divide by count (6 / 3 = 2).",
-          source: "RRB JE Electrical Syllabus - Resistive Networks"
-        }
-      ]
-    }
-  ];
-
-  function createDefaultState() {
-    return {
-      quizzes: DEFAULT_QUIZZES,
-      attempts: [],
-      mistakes: [],
-      devUnlocked: false,
-      simpleView: false,
-      config: {
-        title: "Electrical Studio",
-        lang: "en",
-        accent: "#0f4c81",
-        fontScale: 1,
-        bannerTitle: "RRB JE Electrical Engineering — Technical CBT",
-        bannerSub: "Syllabus-focused practice, per-question timing, mistake tracking, and live customization.",
-        customCss: "",
-        customJs: ""
+    quizzes: [
+      {
+        id: "basic-concepts-1",
+        title: "Basic Concepts: Charge, Current, Resistance & Ohm's Law",
+        topic: "Basic Concepts",
+        difficulty: "Easy-Moderate",
+        durationSec: 420,
+        questions: [
+          {
+            q: "SI unit of electrical resistivity (rho) is:",
+            options: ["Ohm", "Ohm-meter", "Siemens", "Mho/meter"],
+            answer: 1,
+            fact: "Resistivity rho = R * A / l, so its SI unit is Ohm-meter.",
+            trick: "Rho has 'meter' in length/area ratio -> Ohm-meter.",
+            source: "RRB JE Electrical Syllabus"
+          }
+        ]
       }
-    };
-  }
+    ]
+  };
 
-  let state = loadState();
+  let appData = JSON.parse(JSON.stringify(FALLBACK_DATA));
+  let userProgress = loadUserProgress();
+  let adminUnlocked = false;
+  let simpleView = false;
   let currentView = "home";
   let pendingQuiz = null;
   let activeSession = null;
@@ -1035,30 +531,24 @@
   let testTimerInterval = null;
   let qStopwatchInterval = null;
 
-  function loadState() {
+  function loadUserProgress() {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return createDefaultState();
+      const raw = localStorage.getItem(USER_STORAGE_KEY);
+      if (!raw) return { attempts: [], mistakes: [] };
       const parsed = JSON.parse(raw);
       return {
-        ...createDefaultState(),
-        ...parsed,
-        config: { ...createDefaultState().config, ...(parsed.config || {}) },
-        quizzes: Array.isArray(parsed.quizzes) && parsed.quizzes.length ? parsed.quizzes : DEFAULT_QUIZZES,
         attempts: Array.isArray(parsed.attempts) ? parsed.attempts : [],
         mistakes: Array.isArray(parsed.mistakes) ? parsed.mistakes : []
       };
     } catch (e) {
-      return createDefaultState();
+      return { attempts: [], mistakes: [] };
     }
   }
 
-  function saveState() {
+  function saveUserProgress() {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    } catch (e) {
-      showToast("Storage full or blocked");
-    }
+      localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(userProgress));
+    } catch (e) {}
   }
 
   function showToast(msg) {
@@ -1066,16 +556,46 @@
     box.textContent = msg;
     box.style.display = "block";
     clearTimeout(showToast._t);
-    showToast._t = setTimeout(() => {
-      box.style.display = "none";
-    }, 2200);
+    showToast._t = setTimeout(() => { box.style.display = "none"; }, 2400);
   }
 
   function formatSec(sec) {
     const s = Math.max(0, Math.floor(sec));
-    const m = Math.floor(s / 60);
-    const rem = s % 60;
-    return `${String(m).padStart(2, "0")}:${String(rem).padStart(2, "0")}`;
+    return `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
+  }
+
+  async function loadAppDataFromJson() {
+    const syncEl = document.getElementById("dataSyncStatus");
+    try {
+      const res = await fetch("./data.json?t=" + Date.now());
+      if (!res.ok) throw new Error("data.json not found");
+      const json = await res.json();
+      if (json && json.config && Array.isArray(json.quizzes)) {
+        appData = json;
+        syncEl.textContent = "Live: data.json";
+      } else {
+        throw new Error("Invalid data.json");
+      }
+    } catch (err) {
+      syncEl.textContent = "Fallback Mode";
+    }
+    applyConfig();
+    renderCurrentView();
+  }
+
+  function applyConfig() {
+    const cfg = appData.config || FALLBACK_DATA.config;
+    document.documentElement.style.setProperty("--accent", cfg.accent || "#0f4c81");
+    document.documentElement.style.setProperty("--accent-2", cfg.accent2 || "#0284c7");
+    document.documentElement.style.setProperty("--bg", cfg.bg || "#eef2f7");
+    document.documentElement.style.setProperty("--surface", cfg.surface || "#ffffff");
+    document.documentElement.style.setProperty("--font-scale", String(cfg.fontScale || 1));
+
+    document.getElementById("brandBadge").textContent = cfg.badge || "RRB JE";
+    document.getElementById("brandTitle").textContent = cfg.title || "Electrical Studio";
+    document.getElementById("homeBannerTitle").textContent = cfg.bannerTitle || "";
+    document.getElementById("homeBannerSub").textContent = cfg.bannerSub || "";
+    document.getElementById("quotesSection").classList.toggle("hidden", cfg.quotesEnabled === false);
   }
 
   async function fetchMotivationalQuote() {
@@ -1091,23 +611,21 @@
         textEl.textContent = `"${data.quote}"`;
         authorEl.textContent = `— ${data.author || "Unknown"}`;
         statusEl.textContent = "Live Quotes API";
-      } else {
-        throw new Error("Invalid payload");
+        return;
       }
-    } catch (err) {
+      throw new Error("Invalid payload");
+    } catch (e) {
       const pick = FALLBACK_QUOTES[Math.floor(Math.random() * FALLBACK_QUOTES.length)];
       textEl.textContent = `"${pick.quote}"`;
       authorEl.textContent = `— ${pick.author}`;
-      statusEl.textContent = "Curated Quote (Offline)";
+      statusEl.textContent = "Curated Quote";
     }
   }
 
   function copyCurrentQuote() {
     const text = `${document.getElementById("quoteText").textContent} ${document.getElementById("quoteAuthor").textContent}`;
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => {
-        showToast("Quote copied!");
-      }).catch(() => fallbackCopy(text));
+      navigator.clipboard.writeText(text).then(() => showToast("Quote copied!")).catch(() => fallbackCopy(text));
     } else {
       fallbackCopy(text);
     }
@@ -1115,58 +633,21 @@
 
   function fallbackCopy(text) {
     const ta = document.createElement("textarea");
-    ta.value = text;
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    try {
-      document.execCommand("copy");
-      showToast("Quote copied!");
-    } catch (e) {
-      showToast("Copy failed");
-    }
+    ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); showToast("Quote copied!"); } catch (e) {}
     document.body.removeChild(ta);
   }
 
-  function applyConfigAndViewMode() {
-    const root = document.getElementById("appRoot");
-    document.documentElement.style.setProperty("--accent", state.config.accent || "#0f4c81");
-    document.documentElement.style.setProperty("--font-scale", String(state.config.fontScale || 1));
-
-    document.getElementById("brandTitle").textContent = state.config.title || "Electrical Studio";
-    document.getElementById("homeBannerTitle").textContent = state.config.bannerTitle;
-    document.getElementById("homeBannerSub").textContent = state.config.bannerSub;
-
-    if (state.simpleView) {
-      root.classList.add("simple-view");
-      document.getElementById("toggleSimpleViewBtn").textContent = "Normal View";
-    } else {
-      root.classList.remove("simple-view");
-      document.getElementById("toggleSimpleViewBtn").textContent = "Simple View";
-    }
-
-    let customStyleEl = document.getElementById("dynamicCustomCss");
-    if (!customStyleEl) {
-      customStyleEl = document.createElement("style");
-      customStyleEl.id = "dynamicCustomCss";
-      document.head.appendChild(customStyleEl);
-    }
-    customStyleEl.textContent = state.config.customCss || "";
-  }
-
   function startLiveClock() {
-    const updateClock = () => {
-      const now = new Date();
-      document.getElementById("liveClock").textContent = now.toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit"
+    const tick = () => {
+      document.getElementById("liveClock").textContent = new Date().toLocaleTimeString([], {
+        hour: "2-digit", minute: "2-digit", second: "2-digit"
       });
     };
-    updateClock();
+    tick();
     clearInterval(clockInterval);
-    clockInterval = setInterval(updateClock, 1000);
+    clockInterval = setInterval(tick, 1000);
   }
 
   function switchView(viewName) {
@@ -1174,43 +655,33 @@
     document.querySelectorAll(".view-panel").forEach((el) => el.classList.add("hidden"));
     const target = document.getElementById("view-" + viewName);
     if (target) target.classList.remove("hidden");
-
     document.querySelectorAll("#mainNav .btn[data-view]").forEach((btn) => {
       btn.classList.toggle("active-tab", btn.getAttribute("data-view") === viewName);
     });
-
-    const timerPill = document.getElementById("testTimerPill");
-    if (viewName === "cbt" && activeSession) {
-      timerPill.classList.add("active");
-    } else {
-      timerPill.classList.remove("active");
-    }
-
+    document.getElementById("testTimerPill").classList.toggle("active", viewName === "cbt" && !!activeSession);
     renderCurrentView();
   }
   window.switchView = switchView;
 
   function renderCurrentView() {
-    document.getElementById("mistakeCountBadge").textContent = String(state.mistakes.length);
+    document.getElementById("mistakeCountBadge").textContent = String(userProgress.mistakes.length);
     if (currentView === "home") renderHome();
     else if (currentView === "library") renderLibrary();
     else if (currentView === "cbt") renderCbtQuestion();
     else if (currentView === "mistakes") renderMistakes();
     else if (currentView === "analytics") renderAnalytics();
-    else if (currentView === "dev") renderDevStudio();
+    else if (currentView === "admin") renderAdminPanel();
   }
 
   function getFilteredQuizzes() {
     const q = (document.getElementById("globalSearch").value || "").trim().toLowerCase();
-    if (!q) return state.quizzes;
-    return state.quizzes.filter((quiz) => {
-      const inMeta =
-        (quiz.title || "").toLowerCase().includes(q) ||
-        (quiz.topic || "").toLowerCase().includes(q) ||
-        (quiz.difficulty || "").toLowerCase().includes(q);
-      const inQ = (quiz.questions || []).some((item) => (item.q || "").toLowerCase().includes(q));
-      return inMeta || inQ;
-    });
+    const list = appData.quizzes || [];
+    if (!q) return list;
+    return list.filter((quiz) =>
+      (quiz.title || "").toLowerCase().includes(q) ||
+      (quiz.topic || "").toLowerCase().includes(q) ||
+      (quiz.questions || []).some((item) => (item.q || "").toLowerCase().includes(q))
+    );
   }
 
   function renderQuizCard(quiz) {
@@ -1224,10 +695,9 @@
         </div>
         <div class="quiz-meta">
           <span>Topic: <strong>${escapeHtml(quiz.topic || "Electrical")}</strong></span>
-          <span>• ${qCount} Qs</span>
-          <span>• ${mins} min</span>
+          <span>• ${qCount} Qs</span><span>• ${mins} min</span>
         </div>
-        <div style="margin-top: 4px;">
+        <div style="margin-top:4px;">
           <button class="btn sm primary" onclick="openQuizGate('${escapeAttr(quiz.id)}')">Open Quiz</button>
         </div>
       </div>
@@ -1235,109 +705,54 @@
   }
 
   function renderHome() {
-    document.getElementById("statQuizCount").textContent = String(state.quizzes.length);
-    document.getElementById("statAttemptCount").textContent = String(state.attempts.length);
+    document.getElementById("statQuizCount").textContent = String((appData.quizzes || []).length);
+    document.getElementById("statAttemptCount").textContent = String(userProgress.attempts.length);
 
-    let totalQ = 0;
-    let totalSec = 0;
-    state.attempts.forEach((att) => {
-      (att.perQuestion || []).forEach((pq) => {
-        totalQ += 1;
-        totalSec += pq.timeSec || 0;
-      });
-    });
+    let totalQ = 0, totalSec = 0;
+    userProgress.attempts.forEach((a) => (a.perQuestion || []).forEach((pq) => { totalQ += 1; totalSec += pq.timeSec || 0; }));
     document.getElementById("statAvgTime").textContent = totalQ ? `${Math.round(totalSec / totalQ)}s` : "0s";
 
     const list = getFilteredQuizzes().slice(0, 4);
-    const resultsEl = document.getElementById("homeSearchResults");
-    resultsEl.innerHTML = list.length ? list.map(renderQuizCard).join("") : `<div class="muted">No matching quizzes found.</div>`;
+    document.getElementById("homeSearchResults").innerHTML = list.length ? list.map(renderQuizCard).join("") : `<div class="muted">No matching quizzes.</div>`;
 
     const recentEl = document.getElementById("homeRecentAttempts");
-    if (!state.attempts.length) {
-      recentEl.innerHTML = `<div class="muted">No attempts yet. Start a quiz from the Quizzes tab.</div>`;
-    } else {
-      recentEl.innerHTML = state.attempts
-        .slice(-3)
-        .reverse()
-        .map(
-          (a) => `
+    recentEl.innerHTML = userProgress.attempts.length
+      ? userProgress.attempts.slice(-3).reverse().map((a) => `
           <div class="review-item">
             <strong>${escapeHtml(a.quizTitle)}</strong> — Score: <strong>${a.score.toFixed(2)}</strong>
             <span class="muted">(${a.correct} right, ${a.wrong} wrong, ${a.totalTimeSec}s)</span>
-          </div>
-        `
-        )
-        .join("");
-    }
+          </div>`).join("")
+      : `<div class="muted">No attempts yet. Start a quiz from the Quizzes tab.</div>`;
   }
 
   function renderLibrary() {
     const list = getFilteredQuizzes();
     document.getElementById("libraryCountTag").textContent = `${list.length} Quizzes`;
-    document.getElementById("libraryList").innerHTML = list.length
-      ? list.map(renderQuizCard).join("")
-      : `<div class="muted">No quizzes match your search.</div>`;
+    document.getElementById("libraryList").innerHTML = list.length ? list.map(renderQuizCard).join("") : `<div class="muted">No quizzes found.</div>`;
   }
 
   window.openQuizGate = function (quizId) {
-    const quiz = state.quizzes.find((q) => q.id === quizId);
+    const quiz = (appData.quizzes || []).find((q) => q.id === quizId);
     if (!quiz) return;
     pendingQuiz = quiz;
     document.getElementById("gateTitle").textContent = quiz.title;
-    document.getElementById("gateMeta").textContent = `Topic: ${quiz.topic} | Questions: ${quiz.questions.length} | Duration: ${formatSec(quiz.durationSec || 300)}`;
+    document.getElementById("gateMeta").textContent = `Topic: ${quiz.topic} | Qs: ${quiz.questions.length} | Duration: ${formatSec(quiz.durationSec || 300)}`;
     document.getElementById("gateAgreeCheckbox").checked = false;
     switchView("gate");
   };
 
-  function requestFullscreenSafe() {
-    const el = document.documentElement;
-    const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
-    if (req) {
-      try {
-        const res = req.call(el);
-        if (res && typeof res.catch === "function") res.catch(() => {});
-      } catch (e) {}
-    }
-  }
-
-  function exitFullscreenSafe() {
-    const exit = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
-    if (exit && document.fullscreenElement) {
-      try {
-        const res = exit.call(document);
-        if (res && typeof res.catch === "function") res.catch(() => {});
-      } catch (e) {}
-    }
-  }
-
   function startQuizSession(quiz) {
-    const duration = quiz.durationSec || 300;
     activeSession = {
-      quiz,
-      currentIdx: 0,
-      remainingSec: duration,
-      elapsedSec: 0,
-      responses: quiz.questions.map(() => ({
-        selected: null,
-        markedReview: false,
-        visited: false,
-        timeSec: 0
-      }))
+      quiz, currentIdx: 0, remainingSec: quiz.durationSec || 300, elapsedSec: 0,
+      responses: quiz.questions.map(() => ({ selected: null, markedReview: false, timeSec: 0 }))
     };
-    activeSession.responses[0].visited = true;
-
     switchView("cbt");
-    updateTestTimerPill();
-
     clearInterval(testTimerInterval);
     testTimerInterval = setInterval(() => {
       if (!activeSession) return;
-      activeSession.remainingSec -= 1;
-      activeSession.elapsedSec += 1;
-      updateTestTimerPill();
-      if (activeSession.remainingSec <= 0) {
-        submitQuizSession(true);
-      }
+      activeSession.remainingSec -= 1; activeSession.elapsedSec += 1;
+      document.getElementById("testTimerPill").textContent = `Test Left: ${formatSec(activeSession.remainingSec)}`;
+      if (activeSession.remainingSec <= 0) submitQuizSession(true);
     }, 1000);
 
     clearInterval(qStopwatchInterval);
@@ -1349,504 +764,286 @@
     }, 1000);
   }
 
-  function updateTestTimerPill() {
-    const pill = document.getElementById("testTimerPill");
-    if (!activeSession) {
-      pill.classList.remove("active");
-      return;
-    }
-    pill.textContent = `Test Left: ${formatSec(activeSession.remainingSec)}`;
-    pill.classList.add("active");
-  }
-
   function renderCbtQuestion() {
     if (!activeSession) return;
     const { quiz, currentIdx, responses } = activeSession;
     const item = quiz.questions[currentIdx];
     const resp = responses[currentIdx];
-    resp.visited = true;
-
     document.getElementById("cbtQuizTitle").textContent = quiz.title;
     document.getElementById("cbtQIndexTag").textContent = `Q ${currentIdx + 1} / ${quiz.questions.length}`;
     document.getElementById("cbtQTimer").textContent = `Q Time: ${resp.timeSec}s`;
     document.getElementById("cbtQuestionText").textContent = item.q;
-
-    const optList = document.getElementById("cbtOptionsList");
-    optList.innerHTML = item.options
-      .map((opt, idx) => {
-        const sel = resp.selected === idx ? "selected" : "";
-        const label = String.fromCharCode(65 + idx);
-        return `
-          <button type="button" class="opt-btn ${sel}" onclick="selectCbtOption(${idx})">
-            <strong>${label}.</strong>
-            <span>${escapeHtml(opt)}</span>
-          </button>
-        `;
-      })
-      .join("");
-
-    const palette = document.getElementById("cbtPalette");
-    palette.innerHTML = responses
-      .map((r, idx) => {
-        let cls = "pal-btn";
-        if (r.selected !== null && r.markedReview) cls += " ans-rev";
-        else if (r.selected !== null) cls += " ans";
-        else if (r.markedReview) cls += " rev";
-        if (idx === currentIdx) cls += " current";
-        return `<button type="button" class="${cls}" onclick="jumpToQuestion(${idx})">${idx + 1}</button>`;
-      })
-      .join("");
+    document.getElementById("cbtOptionsList").innerHTML = item.options.map((opt, idx) => `
+      <button type="button" class="opt-btn ${resp.selected === idx ? "selected" : ""}" onclick="selectCbtOption(${idx})">
+        <strong>${String.fromCharCode(65 + idx)}.</strong><span>${escapeHtml(opt)}</span>
+      </button>`).join("");
+    document.getElementById("cbtPalette").innerHTML = responses.map((r, idx) => {
+      let cls = "pal-btn";
+      if (r.selected !== null && r.markedReview) cls += " ans-rev";
+      else if (r.selected !== null) cls += " ans";
+      else if (r.markedReview) cls += " rev";
+      if (idx === currentIdx) cls += " current";
+      return `<button type="button" class="${cls}" onclick="jumpToQuestion(${idx})">${idx + 1}</button>`;
+    }).join("");
   }
 
-  window.selectCbtOption = function (optIdx) {
-    if (!activeSession) return;
-    activeSession.responses[activeSession.currentIdx].selected = optIdx;
-    renderCbtQuestion();
-  };
-
-  window.jumpToQuestion = function (idx) {
-    if (!activeSession || idx < 0 || idx >= activeSession.quiz.questions.length) return;
-    activeSession.currentIdx = idx;
-    renderCbtQuestion();
-  };
+  window.selectCbtOption = function (idx) { if (activeSession) { activeSession.responses[activeSession.currentIdx].selected = idx; renderCbtQuestion(); } };
+  window.jumpToQuestion = function (idx) { if (activeSession) { activeSession.currentIdx = idx; renderCbtQuestion(); } };
 
   function submitQuizSession(autoSubmitted) {
     if (!activeSession) return;
-    clearInterval(testTimerInterval);
-    clearInterval(qStopwatchInterval);
-
+    clearInterval(testTimerInterval); clearInterval(qStopwatchInterval);
     const { quiz, responses, elapsedSec } = activeSession;
-    let correct = 0;
-    let wrong = 0;
-    let skipped = 0;
-
+    let correct = 0, wrong = 0, skipped = 0;
     const perQuestion = quiz.questions.map((qItem, idx) => {
       const r = responses[idx];
       const isCorrect = r.selected === qItem.answer;
       const isSkipped = r.selected === null || r.selected === undefined;
-      if (isSkipped) {
-        skipped += 1;
-      } else if (isCorrect) {
-        correct += 1;
-      } else {
+      if (isSkipped) skipped += 1;
+      else if (isCorrect) correct += 1;
+      else {
         wrong += 1;
-        addMistakeIfMissing(quiz, qItem);
+        if (!userProgress.mistakes.some((m) => m.q === qItem.q)) {
+          userProgress.mistakes.push({ id: "m-" + Date.now() + idx, topic: quiz.topic || "Electrical", ...qItem });
+        }
       }
-      return {
-        q: qItem.q,
-        options: qItem.options,
-        correctIdx: qItem.answer,
-        selectedIdx: r.selected,
-        isCorrect,
-        isSkipped,
-        timeSec: r.timeSec || 0,
-        fact: qItem.fact || "",
-        trick: qItem.trick || "",
-        source: qItem.source || "RRB JE Electrical Syllabus"
-      };
+      return { q: qItem.q, options: qItem.options, correctIdx: qItem.answer, selectedIdx: r.selected, isCorrect, isSkipped, timeSec: r.timeSec, fact: qItem.fact || "", trick: qItem.trick || "", source: qItem.source || "" };
     });
 
-    const score = correct * 1 - wrong * 0.25;
-    const attempt = {
-      id: "att-" + Date.now(),
-      date: new Date().toLocaleString(),
-      quizTitle: quiz.title,
-      score,
-      correct,
-      wrong,
-      skipped,
-      totalTimeSec: elapsedSec || perQuestion.reduce((s, x) => s + x.timeSec, 0),
-      perQuestion
-    };
-
-    state.attempts.push(attempt);
-    saveState();
+    const attempt = { id: "att-" + Date.now(), date: new Date().toLocaleString(), quizTitle: quiz.title, score: correct - wrong * 0.25, correct, wrong, skipped, totalTimeSec: elapsedSec, perQuestion };
+    userProgress.attempts.push(attempt);
+    saveUserProgress();
     activeSession = null;
-    exitFullscreenSafe();
     renderResultAttempt(attempt, autoSubmitted);
     switchView("result");
   }
 
-  function addMistakeIfMissing(quiz, qItem) {
-    const exists = state.mistakes.some((m) => m.q === qItem.q);
-    if (!exists) {
-      state.mistakes.push({
-        id: "m-" + Date.now() + "-" + Math.random().toString(36).slice(2, 6),
-        topic: quiz.topic || "Electrical",
-        q: qItem.q,
-        options: qItem.options,
-        answer: qItem.answer,
-        fact: qItem.fact || "",
-        trick: qItem.trick || "",
-        source: qItem.source || "RRB JE Electrical Syllabus"
-      });
-    }
-  }
-
   function renderResultAttempt(attempt, autoSubmitted) {
     document.getElementById("resultTitle").textContent = `${attempt.quizTitle}${autoSubmitted ? " (Time Up)" : ""}`;
-    const avgSec = attempt.perQuestion.length
-      ? Math.round(attempt.totalTimeSec / attempt.perQuestion.length)
-      : 0;
-
     document.getElementById("resultStatsGrid").innerHTML = `
       <div class="stat-box"><div class="stat-label">Net Score</div><div class="stat-val">${attempt.score.toFixed(2)}</div></div>
       <div class="stat-box"><div class="stat-label">Right / Wrong / Skip</div><div class="stat-val">${attempt.correct} / ${attempt.wrong} / ${attempt.skipped}</div></div>
-      <div class="stat-box"><div class="stat-label">Total / Avg Time</div><div class="stat-val">${attempt.totalTimeSec}s / ${avgSec}s</div></div>
-    `;
-
-    document.getElementById("resultBreakdownList").innerHTML = attempt.perQuestion
-      .map((pq, i) => {
-        const badge = pq.isSkipped
-          ? `<span class="tag warn">Skipped • ${pq.timeSec}s</span>`
-          : pq.isCorrect
-          ? `<span class="tag ok">Correct • ${pq.timeSec}s</span>`
-          : `<span class="tag bad">Wrong • ${pq.timeSec}s</span>`;
-        const yourAns = pq.selectedIdx !== null && pq.selectedIdx !== undefined ? pq.options[pq.selectedIdx] : "None";
-        const rightAns = pq.options[pq.correctIdx];
-        return `
-          <div class="review-item">
-            <div style="display:flex; justify-content:space-between; gap:8px; margin-bottom:4px;">
-              <strong>Q${i + 1}: ${escapeHtml(pq.q)}</strong>
-              ${badge}
-            </div>
-            <div class="muted">Your Ans: <strong>${escapeHtml(yourAns)}</strong> | Correct: <strong>${escapeHtml(rightAns)}</strong></div>
-            ${pq.fact ? `<div style="font-size:0.84rem; margin-top:4px;"><strong>Fact:</strong> ${escapeHtml(pq.fact)}</div>` : ""}
-            ${pq.trick ? `<div style="font-size:0.84rem;"><strong>Smart Trick:</strong> ${escapeHtml(pq.trick)}</div>` : ""}
-            <div class="muted" style="margin-top:3px;">Source: ${escapeHtml(pq.source)}</div>
-          </div>
-        `;
-      })
-      .join("");
+      <div class="stat-box"><div class="stat-label">Total Time</div><div class="stat-val">${attempt.totalTimeSec}s</div></div>`;
+    document.getElementById("resultBreakdownList").innerHTML = attempt.perQuestion.map((pq, i) => `
+      <div class="review-item">
+        <div style="display:flex;justify-content:space-between;gap:8px;"><strong>Q${i+1}: ${escapeHtml(pq.q)}</strong><span class="tag ${pq.isSkipped ? "warn" : pq.isCorrect ? "ok" : "bad"}">${pq.isSkipped ? "Skipped" : pq.isCorrect ? "Correct" : "Wrong"} • ${pq.timeSec}s</span></div>
+        <div class="muted">Your: <strong>${escapeHtml(pq.selectedIdx !== null ? pq.options[pq.selectedIdx] : "None")}</strong> | Correct: <strong>${escapeHtml(pq.options[pq.correctIdx])}</strong></div>
+        ${pq.fact ? `<div style="font-size:0.84rem;margin-top:4px;"><strong>Fact:</strong> ${escapeHtml(pq.fact)}</div>` : ""}
+      </div>`).join("");
   }
 
   function renderMistakes() {
     const el = document.getElementById("mistakeLogList");
-    if (!state.mistakes.length) {
-      el.innerHTML = `<div class="muted">No saved mistakes yet. Keep practicing!</div>`;
-      return;
-    }
-    el.innerHTML = state.mistakes
-      .map(
-        (m, idx) => `
-        <div class="review-item">
-          <div style="display:flex; justify-content:space-between; gap:8px;">
-            <strong>M${idx + 1} (${escapeHtml(m.topic)}): ${escapeHtml(m.q)}</strong>
-            <button class="btn sm" onclick="removeMistake('${escapeAttr(m.id)}')">Remove</button>
-          </div>
-          <div class="muted" style="margin-top:4px;">Correct Option: <strong>${escapeHtml(m.options[m.answer])}</strong></div>
-          ${m.fact ? `<div style="font-size:0.83rem; margin-top:3px;"><strong>Fact:</strong> ${escapeHtml(m.fact)}</div>` : ""}
-          ${m.trick ? `<div style="font-size:0.83rem;"><strong>Smart Trick:</strong> ${escapeHtml(m.trick)}</div>` : ""}
-          <div class="muted" style="margin-top:2px;">Source: ${escapeHtml(m.source)}</div>
-        </div>
-      `
-      )
-      .join("");
+    el.innerHTML = userProgress.mistakes.length ? userProgress.mistakes.map((m, idx) => `
+      <div class="review-item">
+        <div style="display:flex;justify-content:space-between;gap:8px;"><strong>M${idx+1}: ${escapeHtml(m.q)}</strong><button class="btn sm" onclick="removeMistake('${escapeAttr(m.id)}')">Remove</button></div>
+        <div class="muted">Correct: <strong>${escapeHtml(m.options[m.answer])}</strong></div>
+      </div>`).join("") : `<div class="muted">No saved mistakes yet.</div>`;
   }
-
-  window.removeMistake = function (id) {
-    state.mistakes = state.mistakes.filter((m) => m.id !== id);
-    saveState();
-    renderMistakes();
-    document.getElementById("mistakeCountBadge").textContent = String(state.mistakes.length);
-  };
+  window.removeMistake = function (id) { userProgress.mistakes = userProgress.mistakes.filter((m) => m.id !== id); saveUserProgress(); renderMistakes(); };
 
   function renderAnalytics() {
     const el = document.getElementById("analyticsHistoryList");
-    if (!state.attempts.length) {
-      el.innerHTML = `<div class="muted">No test attempts recorded yet.</div>`;
+    el.innerHTML = userProgress.attempts.length ? userProgress.attempts.slice().reverse().map((a) => `
+      <div class="review-item">
+        <div style="display:flex;justify-content:space-between;gap:6px;"><strong>${escapeHtml(a.quizTitle)}</strong><span class="tag">Score: ${a.score.toFixed(2)}</span></div>
+        <div class="muted">${escapeHtml(a.date)} | Right: ${a.correct} | Wrong: ${a.wrong} | Time: ${a.totalTimeSec}s</div>
+      </div>`).join("") : `<div class="muted">No test attempts recorded yet.</div>`;
+  }
+
+  function renderAdminPanel() {
+    document.getElementById("adminLockCard").classList.toggle("hidden", adminUnlocked);
+    document.getElementById("adminPanelBody").classList.toggle("hidden", !adminUnlocked);
+    if (!adminUnlocked) return;
+
+    try {
+      const gh = JSON.parse(localStorage.getItem(GH_SETTINGS_KEY) || "{}");
+      if (gh.owner) document.getElementById("ghOwner").value = gh.owner;
+      if (gh.repo) document.getElementById("ghRepo").value = gh.repo;
+      if (gh.branch) document.getElementById("ghBranch").value = gh.branch;
+      if (gh.path) document.getElementById("ghPath").value = gh.path;
+      if (gh.token) document.getElementById("ghToken").value = gh.token;
+    } catch (e) {}
+
+    const cfg = appData.config || FALLBACK_DATA.config;
+    document.getElementById("cfgTitle").value = cfg.title || "";
+    document.getElementById("cfgBadge").value = cfg.badge || "";
+    document.getElementById("cfgAccent").value = cfg.accent || "#0f4c81";
+    document.getElementById("cfgAccent2").value = cfg.accent2 || "#0284c7";
+    document.getElementById("cfgBg").value = cfg.bg || "#eef2f7";
+    document.getElementById("cfgFontScale").value = cfg.fontScale || 1;
+    document.getElementById("cfgBannerTitle").value = cfg.bannerTitle || "";
+    document.getElementById("cfgBannerSub").value = cfg.bannerSub || "";
+  }
+
+  function getGhSettings() {
+    const s = {
+      owner: document.getElementById("ghOwner").value.trim(),
+      repo: document.getElementById("ghRepo").value.trim() || "JE-CRASH-COURSE",
+      branch: document.getElementById("ghBranch").value.trim() || "main",
+      path: document.getElementById("ghPath").value.trim() || "data.json",
+      token: document.getElementById("ghToken").value.trim()
+    };
+    try { localStorage.setItem(GH_SETTINGS_KEY, JSON.stringify(s)); } catch (e) {}
+    return s;
+  }
+
+  function utf8ToBase64(str) {
+    return btoa(unescape(encodeURIComponent(str)));
+  }
+
+  function base64ToUtf8(b64) {
+    return decodeURIComponent(escape(atob(b64.replace(/\n/g, ""))));
+  }
+
+  async function pullFromGitHub() {
+    const s = getGhSettings();
+    const statusEl = document.getElementById("ghSyncStatus");
+    if (!s.owner || !s.repo) { showToast("Enter GitHub Username & Repo"); return; }
+    statusEl.textContent = "Pulling data.json from GitHub...";
+    try {
+      const headers = { Accept: "application/vnd.github+json" };
+      if (s.token) headers.Authorization = `Bearer ${s.token}`;
+      const url = `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${s.path}?ref=${s.branch}`;
+      const res = await fetch(url, { headers });
+      if (!res.ok) throw new Error(`GitHub API ${res.status}`);
+      const fileData = await res.json();
+      const decoded = JSON.parse(base64ToUtf8(fileData.content));
+      appData = decoded;
+      applyConfig();
+      renderAdminPanel();
+      statusEl.textContent = "Pulled latest data.json successfully!";
+      showToast("Pulled from GitHub");
+    } catch (err) {
+      statusEl.textContent = "Pull failed: " + err.message;
+      showToast("GitHub pull failed");
+    }
+  }
+
+  async function pushToGitHub() {
+    const s = getGhSettings();
+    const statusEl = document.getElementById("ghSyncStatus");
+    if (!s.owner || !s.repo || !s.token) {
+      showToast("Username, Repo & PAT Token required to push");
       return;
     }
-    el.innerHTML = state.attempts
-      .slice()
-      .reverse()
-      .map(
-        (a) => `
-        <div class="review-item">
-          <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;">
-            <strong>${escapeHtml(a.quizTitle)}</strong>
-            <span class="tag">Score: ${a.score.toFixed(2)}</span>
-          </div>
-          <div class="muted" style="margin-top:4px;">
-            Date: ${escapeHtml(a.date)} | Right: ${a.correct} | Wrong: ${a.wrong} | Skip: ${a.skipped} | Time: ${a.totalTimeSec}s
-          </div>
-        </div>
-      `
-      )
-      .join("");
-  }
-
-  function renderDevStudio() {
-    const lockCard = document.getElementById("devLockCard");
-    const body = document.getElementById("devStudioBody");
-    if (!state.devUnlocked) {
-      lockCard.classList.remove("hidden");
-      body.classList.add("hidden");
-      return;
+    statusEl.textContent = "Pushing data.json to GitHub...";
+    try {
+      const apiUrl = `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${s.path}`;
+      const headers = {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${s.token}`,
+        "Content-Type": "application/json"
+      };
+      let sha = undefined;
+      const getRes = await fetch(`${apiUrl}?ref=${s.branch}`, { headers });
+      if (getRes.ok) {
+        const existing = await getRes.json();
+        sha = existing.sha;
+      }
+      const body = {
+        message: "Update data.json from Admin Panel",
+        content: utf8ToBase64(JSON.stringify(appData, null, 2)),
+        branch: s.branch
+      };
+      if (sha) body.sha = sha;
+      const putRes = await fetch(apiUrl, { method: "PUT", headers, body: JSON.stringify(body) });
+      if (!putRes.ok) throw new Error(`GitHub PUT ${putRes.status}`);
+      statusEl.textContent = "Updated data.json on GitHub! Pages will refresh in ~1 min.";
+      showToast("Pushed to GitHub!");
+    } catch (err) {
+      statusEl.textContent = "Push failed: " + err.message;
+      showToast("GitHub push failed");
     }
-    lockCard.classList.add("hidden");
-    body.classList.remove("hidden");
-
-    document.getElementById("cfgTitle").value = state.config.title || "";
-    document.getElementById("cfgLang").value = state.config.lang || "en";
-    document.getElementById("cfgAccent").value = state.config.accent || "#0f4c81";
-    document.getElementById("cfgFontScale").value = state.config.fontScale || 1;
-    document.getElementById("cfgBannerTitle").value = state.config.bannerTitle || "";
-    document.getElementById("cfgBannerSub").value = state.config.bannerSub || "";
-    document.getElementById("devCustomCss").value = state.config.customCss || "";
-    document.getElementById("devCustomJs").value = state.config.customJs || "";
   }
 
-  function escapeHtml(str) {
-    return String(str || "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
-  }
-
-  function escapeAttr(str) {
-    return String(str || "").replace(/'/g, "&#39;");
-  }
+  function escapeHtml(str) { return String(str || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function escapeAttr(str) { return String(str || "").replace(/'/g,"&#39;"); }
 
   function bindEvents() {
     document.getElementById("newQuoteBtn").addEventListener("click", fetchMotivationalQuote);
     document.getElementById("copyQuoteBtn").addEventListener("click", copyCurrentQuote);
-
     document.querySelectorAll("#mainNav .btn[data-view]").forEach((btn) => {
       btn.addEventListener("click", () => switchView(btn.getAttribute("data-view")));
     });
-
     document.getElementById("toggleSimpleViewBtn").addEventListener("click", () => {
-      state.simpleView = !state.simpleView;
-      saveState();
-      applyConfigAndViewMode();
-      showToast(state.simpleView ? "Simple View enabled" : "Normal View enabled");
+      simpleView = !simpleView;
+      document.getElementById("appRoot").classList.toggle("simple-view", simpleView);
+      document.getElementById("toggleSimpleViewBtn").textContent = simpleView ? "Normal View" : "Simple View";
     });
-
-    document.getElementById("globalSearch").addEventListener("input", () => {
-      if (currentView === "home") renderHome();
-      if (currentView === "library") renderLibrary();
-    });
-
-    document.getElementById("clearSearchBtn").addEventListener("click", () => {
-      document.getElementById("globalSearch").value = "";
-      renderCurrentView();
-    });
-
+    document.getElementById("globalSearch").addEventListener("input", renderCurrentView);
+    document.getElementById("clearSearchBtn").addEventListener("click", () => { document.getElementById("globalSearch").value = ""; renderCurrentView(); });
     document.getElementById("gateStartBtn").addEventListener("click", () => {
-      if (!pendingQuiz) return;
-      if (!document.getElementById("gateAgreeCheckbox").checked) {
-        showToast("Please check the confirmation box first");
-        return;
-      }
-      requestFullscreenSafe();
+      if (!pendingQuiz || !document.getElementById("gateAgreeCheckbox").checked) { showToast("Check confirmation box first"); return; }
       startQuizSession(pendingQuiz);
     });
-
-    document.getElementById("btnPrevQ").addEventListener("click", () => {
-      if (!activeSession) return;
-      activeSession.currentIdx = Math.max(0, activeSession.currentIdx - 1);
-      renderCbtQuestion();
-    });
-
-    document.getElementById("btnClearQ").addEventListener("click", () => {
-      if (!activeSession) return;
-      activeSession.responses[activeSession.currentIdx].selected = null;
-      renderCbtQuestion();
-    });
-
-    document.getElementById("btnMarkReview").addEventListener("click", () => {
-      if (!activeSession) return;
-      const r = activeSession.responses[activeSession.currentIdx];
-      r.markedReview = !r.markedReview;
-      renderCbtQuestion();
-    });
-
+    document.getElementById("btnPrevQ").addEventListener("click", () => { if (activeSession) { activeSession.currentIdx = Math.max(0, activeSession.currentIdx - 1); renderCbtQuestion(); } });
+    document.getElementById("btnClearQ").addEventListener("click", () => { if (activeSession) { activeSession.responses[activeSession.currentIdx].selected = null; renderCbtQuestion(); } });
+    document.getElementById("btnMarkReview").addEventListener("click", () => { if (activeSession) { activeSession.responses[activeSession.currentIdx].markedReview = !activeSession.responses[activeSession.currentIdx].markedReview; renderCbtQuestion(); } });
     document.getElementById("btnSaveNext").addEventListener("click", () => {
       if (!activeSession) return;
-      if (activeSession.currentIdx < activeSession.quiz.questions.length - 1) {
-        activeSession.currentIdx += 1;
-        renderCbtQuestion();
-      } else {
-        showToast("Last question reached. Click Submit Test to finish.");
-      }
+      if (activeSession.currentIdx < activeSession.quiz.questions.length - 1) { activeSession.currentIdx += 1; renderCbtQuestion(); }
+      else showToast("Last question! Click Submit Test.");
     });
-
-    document.getElementById("btnSubmitQuiz").addEventListener("click", () => {
-      submitQuizSession(false);
-    });
-
+    document.getElementById("btnSubmitQuiz").addEventListener("click", () => submitQuizSession(false));
     document.getElementById("startMistakeQuizBtn").addEventListener("click", () => {
-      if (!state.mistakes.length) {
-        showToast("No mistakes in log");
-        return;
-      }
-      const mistakeQuiz = {
-        id: "mistake-drill-" + Date.now(),
-        title: "Mistake Log Revision Drill",
-        topic: "Mistake Revision",
-        difficulty: "Targeted",
-        durationSec: Math.max(180, state.mistakes.length * 60),
-        questions: state.mistakes.map((m) => ({
-          q: m.q,
-          options: m.options,
-          answer: m.answer,
-          fact: m.fact,
-          trick: m.trick,
-          source: m.source
-        }))
-      };
-      activeSession = null;
-      document.getElementById("gateTitle").textContent = mistakeQuiz.title;
-      document.getElementById("gateMeta").textContent = `Questions: ${mistakeQuiz.questions.length} | Duration: ${formatSec(mistakeQuiz.durationSec)}`;
+      if (!userProgress.mistakes.length) { showToast("No mistakes logged"); return; }
+      pendingQuiz = { id: "mistake-drill", title: "Mistake Revision Drill", topic: "Revision", difficulty: "Targeted", durationSec: userProgress.mistakes.length * 60, questions: userProgress.mistakes };
+      document.getElementById("gateTitle").textContent = pendingQuiz.title;
+      document.getElementById("gateMeta").textContent = `Qs: ${pendingQuiz.questions.length}`;
       document.getElementById("gateAgreeCheckbox").checked = false;
-      pendingQuiz = mistakeQuiz;
       switchView("gate");
     });
-
-    document.getElementById("clearMistakesBtn").addEventListener("click", () => {
-      state.mistakes = [];
-      saveState();
-      renderMistakes();
-      document.getElementById("mistakeCountBadge").textContent = "0";
-      showToast("Mistake log cleared");
-    });
-
+    document.getElementById("clearMistakesBtn").addEventListener("click", () => { userProgress.mistakes = []; saveUserProgress(); renderMistakes(); showToast("Cleared"); });
     document.getElementById("exportBackupBtn").addEventListener("click", () => {
-      const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
-      a.href = url;
-      a.download = "rrb-je-electrical-studio-backup.json";
-      a.click();
-      URL.revokeObjectURL(url);
-      showToast("Backup JSON downloaded");
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(userProgress, null, 2)], { type: "application/json" }));
+      a.download = "rrb-je-progress-backup.json"; a.click();
     });
 
-    document.getElementById("devUnlockBtn").addEventListener("click", () => {
-      const pin = document.getElementById("devPinInput").value.trim();
-      if (pin === DEV_PIN) {
-        state.devUnlocked = true;
-        saveState();
-        renderDevStudio();
-        showToast("Developer Studio unlocked");
-      } else {
-        showToast("Invalid PIN (default: 1234)");
-      }
+    document.getElementById("adminUnlockBtn").addEventListener("click", () => {
+      if (document.getElementById("adminPinInput").value.trim() === ADMIN_PIN) { adminUnlocked = true; renderAdminPanel(); showToast("Admin Unlocked"); }
+      else showToast("Invalid PIN (default: 1234)");
+    });
+    document.getElementById("adminLockNowBtn").addEventListener("click", () => { adminUnlocked = false; renderAdminPanel(); });
+    document.getElementById("ghLoadBtn").addEventListener("click", pullFromGitHub);
+    document.getElementById("ghPushBtn").addEventListener("click", pushToGitHub);
+
+    document.getElementById("applyConfigLocalBtn").addEventListener("click", () => {
+      appData.config.title = document.getElementById("cfgTitle").value.trim() || "Electrical Studio";
+      appData.config.badge = document.getElementById("cfgBadge").value.trim() || "RRB JE";
+      appData.config.accent = document.getElementById("cfgAccent").value;
+      appData.config.accent2 = document.getElementById("cfgAccent2").value;
+      appData.config.bg = document.getElementById("cfgBg").value;
+      appData.config.fontScale = parseFloat(document.getElementById("cfgFontScale").value) || 1;
+      appData.config.bannerTitle = document.getElementById("cfgBannerTitle").value.trim();
+      appData.config.bannerSub = document.getElementById("cfgBannerSub").value.trim();
+      applyConfig();
+      showToast("Preview updated! Click Push to save to GitHub.");
     });
 
-    document.getElementById("devQuickUnlockBtn").addEventListener("click", () => {
-      state.devUnlocked = true;
-      saveState();
-      renderDevStudio();
-      showToast("Developer Studio unlocked");
-    });
-
-    document.getElementById("devLockNowBtn").addEventListener("click", () => {
-      state.devUnlocked = false;
-      saveState();
-      renderDevStudio();
-    });
-
-    document.getElementById("saveThemeBtn").addEventListener("click", () => {
-      state.config.title = document.getElementById("cfgTitle").value.trim() || "Electrical Studio";
-      state.config.lang = document.getElementById("cfgLang").value;
-      state.config.accent = document.getElementById("cfgAccent").value || "#0f4c81";
-      const scale = parseFloat(document.getElementById("cfgFontScale").value);
-      state.config.fontScale = isNaN(scale) ? 1 : Math.min(1.25, Math.max(0.85, scale));
-      state.config.bannerTitle = document.getElementById("cfgBannerTitle").value.trim();
-      state.config.bannerSub = document.getElementById("cfgBannerSub").value.trim();
-      saveState();
-      applyConfigAndViewMode();
-      showToast("UI settings applied");
-    });
-
-    document.getElementById("devFillSampleJsonBtn").addEventListener("click", () => {
-      const sample = {
-        id: "dc-machines-1",
-        title: "DC Machines: EMF & Torque Basics",
-        topic: "Electrical Machines",
-        difficulty: "Moderate",
-        durationSec: 300,
-        questions: [
-          {
-            q: "EMF induced in a DC generator armature is directly proportional to:",
-            options: ["Flux per pole and speed", "Armature resistance only", "Number of brushes only", "Terminal load only"],
-            answer: 0,
-            fact: "E_g = (P * Phi * N * Z) / (60 * A), so E_g is directly proportional to Phi and N.",
-            trick: "Flux (Phi) * Speed (N) = More cutting -> More EMF.",
-            source: "RRB JE Electrical Syllabus - DC Machines"
-          }
-        ]
-      };
-      document.getElementById("devQuizJsonInput").value = JSON.stringify(sample, null, 2);
-    });
-
-    document.getElementById("devAddQuizBtn").addEventListener("click", () => {
-      const raw = document.getElementById("devQuizJsonInput").value.trim();
-      if (!raw) {
-        showToast("Paste quiz JSON first");
-        return;
-      }
+    document.getElementById("adminAddQuizBtn").addEventListener("click", () => {
       try {
-        const parsed = JSON.parse(raw);
-        const list = Array.isArray(parsed) ? parsed : [parsed];
+        const parsed = JSON.parse(document.getElementById("adminQuizJsonInput").value.trim());
+        const items = Array.isArray(parsed) ? parsed : [parsed];
         let added = 0;
-        list.forEach((item) => {
-          if (item && item.title && Array.isArray(item.questions) && item.questions.length) {
-            state.quizzes.push({
-              id: item.id || "quiz-" + Date.now() + "-" + added,
-              title: item.title,
-              topic: item.topic || "Electrical Engineering",
-              difficulty: item.difficulty || "JE Level",
-              durationSec: item.durationSec || 300,
-              questions: item.questions
-            });
-            added += 1;
-          }
-        });
-        if (!added) {
-          showToast("JSON needs 'title' and non-empty 'questions'");
-          return;
-        }
-        saveState();
-        showToast(`${added} quiz added to Library`);
-        renderHome();
-      } catch (err) {
-        showToast("Invalid JSON format");
-      }
+        items.forEach((q) => { if (q && q.title && Array.isArray(q.questions)) { appData.quizzes.push(q); added += 1; } });
+        if (!added) throw new Error("Missing title/questions");
+        showToast(`${added} quiz added! Click Push to save on GitHub.`);
+      } catch (e) { showToast("Invalid Quiz JSON"); }
     });
 
-    document.getElementById("devApplyPatchBtn").addEventListener("click", () => {
-      state.config.customCss = document.getElementById("devCustomCss").value;
-      state.config.customJs = document.getElementById("devCustomJs").value;
-      saveState();
-      applyConfigAndViewMode();
-      if (state.config.customJs.trim()) {
-        try {
-          new Function("showToast", state.config.customJs)(showToast);
-        } catch (err) {
-          showToast("JS patch error: " + err.message);
-        }
-      } else {
-        showToast("CSS patch applied");
-      }
-    });
-
-    document.getElementById("devResetAllBtn").addEventListener("click", () => {
-      state = createDefaultState();
-      saveState();
-      applyConfigAndViewMode();
-      renderCurrentView();
-      showToast("All data reset to default");
+    document.getElementById("adminDownloadJsonBtn").addEventListener("click", () => {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(appData, null, 2)], { type: "application/json" }));
+      a.download = "data.json"; a.click();
     });
   }
 
-  applyConfigAndViewMode();
   startLiveClock();
   bindEvents();
   fetchMotivationalQuote();
+  loadAppDataFromJson();
   switchView("home");
 })();
 </script>
